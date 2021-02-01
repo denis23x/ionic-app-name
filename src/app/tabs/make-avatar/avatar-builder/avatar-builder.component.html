@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="builder-atoms">
+    <div class="avatar" #avatar>
+      <div [class]="atom.key" *ngFor="let atom of atoms | keyvalue">
+        <img [src]="atoms[atom.key][avatarMap[atom.key]].url" [alt]="atom.key">
+      </div>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let atom of atoms | keyvalue">
+      <ion-range
+        min="0"
+        [max]="atoms[atom.key].length - 1"
+        snaps="true"
+        (ionChange)="onChangeRanges($event, atom.key)"
+        [value]="avatarMap[atom.key]">
+        <ion-label slot="start">{{atom.key}}</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+  <div class="builder-submit">
+    <ion-button (click)="onSubmit($event)">Create avatar</ion-button>
+  </div>
+</div>

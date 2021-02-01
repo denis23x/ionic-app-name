@@ -1,0 +1,98 @@
+$border-color: var(--ion-item-border-color, var(--ion-border-color, var(--ion-color-step-150, rgba(0, 0, 0, 0.13))));
+
+$head-width: 220px;
+$face-width: 72px;
+$facial-hair-width: 210px;
+$accessories-width: 190px;
+$body-width: 350px;
+
+.container {
+  .builder-atoms {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
+    .avatar {
+      position: relative;
+      border: 1px solid $border-color;
+      height: 300px;
+      width: 250px;
+      border-radius: 16px;
+
+      .head {
+        position: absolute;
+        left: calc(50% - #{$head-width / 2});
+        top: 0;
+        z-index: 1;
+        width: $head-width;
+        height: auto;
+        transform: translate(-4px, -32px);
+
+        img {
+          display: block;
+        }
+      }
+
+      .face {
+        position: absolute;
+        left: calc(50% - #{$face-width / 2});
+        top: 0;
+        z-index: 2;
+        width: $face-width;
+        height: auto;
+        transform: translate(14px, 44px);
+
+        img {
+          display: block;
+        }
+      }
+
+      .facial-hair {
+        position: absolute;
+        left: calc(50% - #{$facial-hair-width / 2});
+        top: 0;
+        z-index: 3;
+        width: $facial-hair-width;
+        height: auto;
+        transform: translate(22px, 22px);
+
+        img {
+          display: block;
+        }
+      }
+
+      .accessories {
+        position: absolute;
+        left: calc(50% - #{$accessories-width / 2});
+        top: 0;
+        z-index: 4;
+        width: $accessories-width;
+        height: auto;
+        transform: translate(4px, 38px);
+
+        img {
+          display: block;
+        }
+      }
+
+      .body {
+        position: absolute;
+        left: calc(50% - #{$body-width / 2});
+        top: 0;
+        width: $body-width;
+        height: auto;
+        transform: translate(-8px, 40px);
+
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .builder-submit {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+}

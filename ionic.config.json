@@ -1,5 +1,8 @@
 {
   "name": "ionic",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "7381cda0"
 }
